@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600,700&display=swap');
+:root{
+    --background:rgb(212, 216, 221);
+    --text:rgb(75, 75, 75);
+    --gradient-1: #f46b45;
+    --gradient-2: #eea849;
+    --feature: #1ed660;
+
+}
+
+*{
+    box-sizing: border-box;
+    margin:0 ;
+    padding: 0;
+}
+
+body{
+    background: var(--background);
+    font-family: "Montserrat";
+}
+
+.hero{
+    height: 100vh;
+    background: linear-gradient(to bottom right,#f46b45d8 ,#eea949cc), url('news.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: .9;
+}
+
+.hero h1{
+    font-size:3rem;
+    font-weight: 700;
+}
+.hero p{
+    font-size:2rem;
+    font-weight: 100;
+}
+
+.buttons{
+    display: flex;
+    padding-top: 1em;
+}
+
+.buttons button{
+    padding: 1em 2em;
+    border: none;
+    font-weight: bold;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    width: 140px;
+}
+
+.sign-up{
+margin-left: .5em;
+background-color: var(--feature);
+color: white;
+}
+.see-more{
+    color: rgb(153, 153, 153);  
+    font-size: 12px;
+}
+
+.modal{
+    position: fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background: rgba(0,0,0,.8);
+    display: none;
+    animation: animate-modal 1s; 
+    
+}
+
+.modal-body{
+
+  width: 40vh;
+  background: white;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.9);
+}
+
+.hero.show-modal .modal{
+    display:block;
+}
+
+.modal i{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+    color: grey;
+}
+
+
+@keyframes animate-modal{
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .modal-form{
+      color: grey;
+      padding: 2em;
+     
+
+  }
+
+  .form-header{
+      padding-bottom: .5em;
+      font-size: 1.5em;
+     
+  }
+
+  .modal-form label{
+      display: block;
+      padding-bottom: .3em;
+      font-size: .9em;
+  }
+
+  .form-control{
+      padding: .5em 0;
+  }
+  .form-control input{
+      padding: .5em;
+      width: 100%;
+      outline: none;
+  }
+.submit-button{
+    border: none;
+    background-color: var(--feature);
+    color: white;
+    padding: .7em 1.1em;
+    font-weight: bold;
+}
+
+input::placeholder {
+    color: rgba(165, 165, 165, 0.596);
+    font-size: .9em;
+    /* font-style: italic; */
+  }
+
+  input::placeholder:active{
+      display: none;
+  }
